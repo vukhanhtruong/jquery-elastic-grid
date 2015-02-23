@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Elastic Grid | JQuery Responsive Porfolio Plugin</title>
+	<meta name="description" content="Elastic Grid | JQuery Responsive Porfolio Plugin" />
+	<meta name="keywords" content="responsive grid, responsive gallery, porfolio, thumbnails, grid, preview, google image search, jquery, image grid, expanding, preview, portfolio" />
+	<meta name="author" content="Vu Khanh Truong | porfolio.bonchen.net" />
+	<link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/elastic_grid.min.css" />
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=284076861683524";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <h1>Elastic Grid | JQuery Responsive Porfolio Plugin</h1>
+    <div class="header-top clearfix">
+        <span>
+            <a href="index.html#demo"><strong>Demo</strong></a>
+            <a href="index.html#html_markup"><strong>HTML Markup</strong></a>
+            <a href="index.html#responsive_layouts"><strong>View Respponsive Layouts</strong></a>
+            <a href="index.html#download"><strong>Download</strong></a>
+        </span>
+        <span class="right">
+            <!-- <a href=""><strong>&raquo;&raquo; Buy Wordpress Version &laquo;&laquo;</strong></a> -->
+        </span>
+    </div>
+
+	<div class="container">
+		<div class="main">
+            <h3>Demo</h3>
+            <a name="demo"></a>
+            <form class="cbp-mc-form">
+                <div class="cbp-mc-column">
+                    <label for="hoverDirection">Hover Direction</label>
+                    <select id="hoverDirection" name="hoverDirection">
+                        <option value="1">On</option>
+                        <option value="0">Off</option>
+                    </select>
+                </div>
+                <div class="cbp-mc-column">
+                    <label for="hoverInverse">Hover Inverse</label>
+                    <select id="hoverInverse" name="hoverInverse">
+                        <option value="0">Off</option>
+                        <option value="1">On</option>
+                    </select>
+                </div>
+                <div class="cbp-mc-column">
+                    <label for="hoverDelay">Hover Delay</label>
+                    <input type="number" id="hoverDelay" name="hoverDelay" value="0">
+                </div>
+                <div class="cbp-mc-column">
+                    <label for="filterEffect">Filter Effect</label>
+                    <select id="filterEffect" name="filterEffect">
+                        <option value="">None</option>
+                        <option value="moveup">Move Up</option>
+                        <option value="scaleup">Scale Up</option>
+                        <option value="fallperspective">Fall Perspective</option>
+                        <option value="fly">Fly</option>
+                        <option value="flip">Flip</option>
+                        <option value="helix">Helix</option>
+                        <option selected="selected" value="popup">Popup</option>
+                    </select>
+                </div>
+                <div class="cbp-mc-column">
+                    <label for="expandingSpeed">Expanding Speed</label>
+                    <input type="number" id="expandingSpeed" name="expandingSpeed" value="500">
+                </div>
+            </form>
+            <div style="height: 40px;"></div>
+            <div id="elastic_grid_demo"></div>
+        </div>
+    </div><!-- /container -->
+
+
+    <div class="container">
+        <div class="main">
+            <h3>HTML markup <small>Output below</small></h3>
+            <a name="html_markup"></a>
+                <div style="text-align:center">
+                    <img src="images/html_markup.png" alt="">
+                </div>
+                <div style="padding: 40px;">
+                    <h4>&raquo; Output</h4>
+                    <iframe height="700" scrolling="yes" src="demo_htmlmarkup.html" width="100%"></iframe>
+                </div>
+        </div>
+    </div><!-- /container -->
+
+
+    <div class="container">
+        <div class="main">
+            <a name="responsive_layouts"></a>
+            <h3>Responsive Layouts</h3>
+            <div id="responsive_layouts">
+                <h5 id="layout-0">+ Mobile portrait (320x480)</h5>
+                <div><iframe height="497" scrolling="yes" src="demo_responsive.html" width="337"></iframe></div>
+                <div class="web-developer-separator"></div>
+                <h5 id="layout-1">+ Mobile landscape (480x320)</h5>
+                <div><iframe height="337" scrolling="yes" src="demo_responsive.html" width="497"></iframe></div>
+                <div class="web-developer-separator"></div>
+                <h5 id="layout-2">+ Small tablet portrait (600x800)</h5>
+                <div><iframe height="817" scrolling="yes" src="demo_responsive.html" width="617"></iframe></div>
+                <div class="web-developer-separator"></div>
+                <h5 id="layout-3">+ Small tablet landscape (800x600)</h5>
+                <div><iframe height="617" scrolling="yes" src="demo_responsive.html" width="817"></iframe></div>
+                <div class="web-developer-separator"></div>
+                <h5 id="layout-4">+ Tablet portrait (768x1024)</h5>
+                <div><iframe height="1041" scrolling="yes" src="demo_responsive.html" width="785"></iframe></div>
+                <div class="web-developer-separator"></div>
+                <h5 id="layout-5">+ Tablet landscape (1024x768)</h5>
+                <div><iframe height="785" scrolling="yes" src="demo_responsive.html" width="1041"></iframe></div>
+                <div class="web-developer-separator"></div>
+            </div>
+
+		</div>
+	</div><!-- /container -->
+
+
+    <div class="container" style="background: #fcd04b; min-height:400px;">
+        <div class="main">
+            <h3>Download</small></h3>
+            <a name="download"></a>
+                <div style="text-align:center">
+                    <table style="width:100%">
+                        <tr>
+                            <td style="width: 33%;">
+                                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://demo.phapsu.com/jquery.elastic_grid/index.html">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                            </td>
+                            <td style="width: 33%;">
+								<div class="fb-like" data-href="http://demo.phapsu.com/jquery.elastic_grid/index.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>                                
+                            </td>
+                            <td style="width: 33%;">
+                                <!-- Place this tag where you want the +1 button to render. -->
+                                <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+
+                                <!-- Place this tag after the last +1 button tag. -->
+                                <script type="text/javascript">
+                                  (function() {
+                                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                                    po.src = 'https://apis.google.com/js/platform.js';
+                                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                                  })();
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+							<td colspan="3" style="padding-top:60px;">
+								<button class="btn btn-3 btn-3d icon-heart-2">Download</button>
+								<button class="btn btn-3 btn-3b icon-star-2">Wordpress Version</button>
+							</td>
+                        </tr>
+                        <tr>
+							<td colspan="3" style="padding-top:60px;">
+								<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+								<input type="hidden" name="cmd" value="_s-xclick">
+								<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+								">
+								<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+								<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+								</form>
+							</td>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+    </div><!-- /container -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/classie.js"></script>
+<script type="text/javascript" src="js/elastic_grid.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+        $('#filterEffect, #hoverDirection, #hoverInverse, #hoverDelay, #expandingSpeed').bind('change', function(){
+            var filterEffect = $('#filterEffect :selected').val();
+            var hoverDirection = $('#hoverDirection').val();
+            var hoverInverse = $('#hoverInverse').val();
+            var hoverDelay = $('#hoverDelay').val();
+            var expandingSpeed = $('#expandingSpeed').val();
+            $.get('demo.php',
+                {'filterEffect' : filterEffect, 'hoverInverse' : hoverInverse, 'hoverDirection' : hoverDirection, 'hoverDelay' : hoverDelay, 'expandingSpeed' : expandingSpeed},
+                function(res){
+                    $('#elastic_grid_demo').html(res);
+            });
+        });
+
+        $.get('demo.php', function(res){
+            $('#elastic_grid_demo').html(res);
+        });
+    });
+</script>
+</body>
+</html>

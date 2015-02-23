@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+	<title>Elastic Grid - Responsive Jquery Gallery Plugin</title>
+ 	<meta name="description" content="Elastic Grid | Responsive Jquery Gallery Plugin">
+	<meta name="author" content="Vu Khanh Truong">
+	<meta name="copyright" content="Vu Khanh Truong">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2013-09-09T00:00:00+02:00">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/documenter_style.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+
+	<style>
+		html, body{background-color:#FFFFFF;color:#383838;}
+		h1,h2,h3,h4,h5,h6{color:#383838;}
+		section table{background-color:#FFFFFF;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		a.brand{background-image:url();}
+		a, a:hover, a:active{color:#0000FF;}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		div.navbar-inner, .navbar .nav li ul{background:#DDDDDD;color:#222222;}
+		a.btn-navbar{background:#DDDDDD;color:#222222;}
+		.navbar .nav li a{color:#222222;text-shadow:1px 1px 0px #EEEEEE;}
+		.navbar .nav li a:hover, .navbar .nav li.active a{text-shadow:none;}
+		div.navbar-inner ul{}
+		.marketing-byline{color:#FFFFFF;}
+		.navbar .nav > li a{color:#444444;}
+		.navbar .nav > li a:hover, a.btn-navbar:hover{background:#444444;color:#DDDDDD;}
+		.navbar .nav .active > a, .navbar .nav .active > a:hover, a.btn-navbar:active{background-color:#444444;color:#DDDDDD;}
+		.navbar .nav li ul li a:hover{background:#444444;color:#DDDDDD;}
+		.navbar .nav li ul li a:active{background:#444444;color:#DDDDDD;}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -ms-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -webkit-gradient(linear, 0 0, 0 0088CC%, from(#DDDDDD), to(#0044CC));
+			  background-image: -webkit-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -o-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: linear-gradient(top, #0088CC, #0044CC);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0044CC', GradientType=0);
+			  border-color: #0044CC #0044CC #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  background-color: #0044CC;
+		}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+
+
+
+    </head>
+
+<body class="documenter-project-elastic-grid" data-spy="scroll" id="top">
+
+<!-- Documentation Navbar -->
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container-fluid">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+			<a class="brand" href="#">Elastic Grid - Responsive Jquery Gallery Plugin</a>
+			<div class="nav-collapse">
+			<ul class="nav">
+
+			<li><a href="#installation" title="Installation">Installation</a></li>
+			<li><a href="#explanation" title="Explanation">Explanation</a></li>
+			<li><a href="#the_options" title="The Options">The Options</a></li>
+			<li><a href="#reference_resources" title="Reference Resources">Reference Resources</a></li>
+
+			</ul>
+			</div>
+		</div>
+	</div>
+</div> <!-- End of Navbar -->
+
+<!-- Main Container Beginning -->
+
+<div class="container-fluid" id="documenter_content">
+
+	<div id="documenter-cover">
+	<div class="masthead">
+	    <h1>Elastic Grid - Responsive Jquery Gallery Plugin</h1>
+		<p>Elastic Grid is a fully responsive image gallery. It allows your visitors to easily sort with many CSS3 effects. When visitors click on a thumbnail, it will open a preview and show a larger image and some other content like a title, a description and a link.</p>
+	    <ul class="marketing-byline">
+
+			<li>latest update: 09/9/2013</li>
+			<li>by: Vu Khanh Truong</li>
+			<li><a href=""></a></li>
+		</ul>
+<!-- 	    <p class="download-info">
+
+		</p>
+ -->
+	</div> <!-- masthead -->
+<!--
+   <div id="intro">
+    <p class="highlight hero-unit"></p>
+   </div>  --><!-- intro -->
+
+	</div>
+
+  <section id="installation">
+	<div class="page-header"><h3>Installation</h3><hr class="notop"></div>
+<h1>
+	<span style="color: rgb(56, 56, 56); font-family: Arial, verdana, arial, sans-serif; font-size: 20px; font-weight: 100;">Import CSS &amp; Javascript</span></h1>
+<p>
+	Style for plugin</p>
+<pre class="prettyprint lang-css linenums">
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/elastic_grid.min.css&quot; /&gt;</pre>
+<p>
+	Scripts for plugin</p>
+<pre class="prettyprint lang-js linenums">
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;js/modernizr.custom.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;js/classie.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/elastic_grid.encode.js&quot;&gt;&lt;/script&gt;</pre>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<h1 style="margin: 0px 0px 18px; padding: 0px; border: 0px; outline: 0px; font-weight: 100; font-size: 20px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	Create HTML container</h1>
+<pre class="prettyprint lang-html linenums">
+&lt;div id=&quot;elastic_grid&quot;&gt;&lt;/div&gt;</pre>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p style="margin: 0px 0px 18px; padding: 0px; border: 0px; outline: 0px; font-weight: 100; font-size: 20px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(56, 56, 56);">
+	Initial Script</p>
+<pre class="prettyprint lang-js linenums">
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+    $(function(){
+
+        $(&quot;#elastic_grid_demo&quot;).elastic_grid({
+            &#39;items&#39; :
+            [
+                {
+                    &#39;title&#39;         : &#39;Title #1&#39;,
+                    &#39;description&#39;   : &#39; Description text here&#39;,
+                    &#39;thumbnail&#39;     : [&#39;images/small/1.jpg&#39;, &#39;images/small/2.jpg&#39;],
+                    &#39;large&#39;         : [&#39;images/large/1.jpg&#39;, &#39;images/large/2.jpg&#39;],
+                    &#39;button_list&#39;   :
+                    [
+                        { &#39;title&#39;:&#39;Demo&#39;, &#39;url&#39; : &#39;http://bonchen.net/&#39; },
+                        { &#39;title&#39;:&#39;Download&#39;, &#39;url&#39;:&#39;http://porfolio.bonchen.net/&#39;}
+                    ],
+                    &#39;tags&#39;          : [&#39;Portrait&#39;]
+                },
+                {
+                    &#39;title&#39;         : &#39;Title #2&#39;,
+                    &#39;description&#39;   : &#39;Description text here&#39;,
+                    &#39;thumbnail&#39;     : [&#39;images/small/4.jpg&#39;, &#39;images/small/5.jpg&#39;],
+                    &#39;large&#39;         : [&#39;images/large/4.jpg&#39;, &#39;images/large/5.jpg&#39;],
+                    &#39;button_list&#39;   :
+                    [
+                        { &#39;title&#39;:&#39;Demo&#39;, &#39;url&#39; : &#39;http://bonchen.net/&#39; },
+                        { &#39;title&#39;:&#39;Download&#39;, &#39;url&#39;:&#39;http://porfolio.bonchen.net/&#39;}
+                    ],
+                    &#39;tags&#39;          : [&#39;Vintage&#39;]
+                },
+                {
+                    &#39;title&#39;         : &#39;Title #3&#39;,
+                    &#39;description&#39;   : &#39;Description text here&#39;,
+                    &#39;thumbnail&#39;     : [&#39;images/small/15.jpg&#39;, &#39;images/small/2.jpg&#39;],
+                    &#39;large&#39;         : [&#39;images/large/15.jpg&#39;, &#39;images/large/2.jpg&#39;],
+                    &#39;button_list&#39;   :
+                    [
+                        { &#39;title&#39;:&#39;Demo&#39;, &#39;url&#39; : &#39;http://bonchen.net/&#39; },
+                        { &#39;title&#39;:&#39;Download&#39;, &#39;url&#39;:&#39;http://porfolio.bonchen.net/&#39;}
+                    ],
+                    &#39;tags&#39;          : [&#39;BW&#39;]
+                }
+            ]
+        });
+    });
+&lt;/script&gt;</pre>
+<h3>
+	There are 3 photos will display in the grid. Please go to next section to find out more.</h3>
+</section>
+<section id="explanation">
+	<div class="page-header"><h3>Explanation</h3><hr class="notop"></div>
+<p>
+	<img alt="" src="assets/images/explanation.png"></p>
+</section>
+<section id="the_options">
+	<div class="page-header"><h3>The Options</h3><hr class="notop"></div>
+<h1>
+	Play with settings</h1>
+<p>
+	<span style="color: rgb(119, 119, 119); font-family: Helvetica, Arial, Helvetica, sans-serif; font-size: 14px; line-height: 22.390625px;">&nbsp;Below is an example of the code with all available options and their defaults:</span></p>
+<pre class="prettyprint lang-js linenums">
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+    $(function(){
+
+        $(&quot;#elastic_grid_demo&quot;).elastic_grid({
+	        &#39;filterEffect&#39;: &#39;popup&#39;,
+	        &#39;hoverDirection&#39;: true,
+	        &#39;hoverDelay&#39;: 0,
+	        &#39;hoverInverse&#39;: false,
+	        &#39;expandingSpeed&#39;: 500,
+	        &#39;expandingHeight&#39;: 500,
+                &#39;items&#39; :
+	            [
+	                {
+	                    &#39;title&#39;         : &#39;Title #1&#39;,
+	                    &#39;description&#39;   : &#39; Description text here&#39;,
+	                    &#39;thumbnail&#39;     : [&#39;images/small/1.jpg&#39;, &#39;images/small/2.jpg&#39;],
+	                    &#39;large&#39;         : [&#39;images/large/1.jpg&#39;, &#39;images/large/2.jpg&#39;],
+	                    &#39;button_list&#39;   :
+	                    [
+	                        { &#39;title&#39;:&#39;Demo&#39;, &#39;url&#39; : &#39;http://bonchen.net/&#39; },
+	                        { &#39;title&#39;:&#39;Download&#39;, &#39;url&#39;:&#39;http://porfolio.bonchen.net/&#39;}
+	                    ],
+	                    &#39;tags&#39;          : [&#39;Portrait&#39;]
+	                },
+					....
+	            ]
+        });
+    });
+&lt;/script&gt;</pre>
+
+<h1>
+	Setting parameters</h1>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 1000px;">
+	<tbody>
+		<tr>
+			<td>
+				<strong>Name</strong></td>
+			<td>
+				<strong>Description</strong></td>
+		</tr>
+		<tr>
+			<td>
+				filterEffect</td>
+			<td>
+				Specify sets like:&nbsp;moveup, scaleup, fallperspective, fly, flip, helix , popup</td>
+		</tr>
+		<tr>
+			<td>
+				hoverDirection</td>
+			<td>
+				Overlay slide in on top of some thumbnails from the direction that we are coming from with the mouse. Set false to turn it off.</td>
+		</tr>
+		<tr>
+			<td>
+				hoverDelay</td>
+			<td>
+				For hover direction</td>
+		</tr>
+		<tr>
+			<td>
+				hoverInverse</td>
+			<td>
+				Inverse the hover direction</td>
+		</tr>
+		<tr>
+			<td>
+				expandingSpeed</td>
+			<td>
+				The speed of open a preview when clicking on a thumbnail</td>
+		</tr>
+		<tr>
+			<td>
+				expandingHeight</td>
+			<td>
+				Belongs to the size of the large image. In the demo, I used the image with size 500x500. If your images have 400x400, so change it to 400</td>
+		</tr>
+		<tr>
+			<td>
+				items</td>
+			<td>
+				Please see the photo on the <a href="#explanation" title="Explanation">previous section</a></td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+</section>
+<section id="reference_resources">
+	<div class="page-header"><h3>Reference Resources</h3><hr class="notop"></div>
+<p>
+	<a href="http://nicolasgallagher.com/micro-clearfix-hack/">Clearfix hack</a> by Nicolas Gallagher</p>
+<p>	<a href="http://lab.hakim.se/scroll-effects/">Scroll effect </a>by @hakimel</p>
+<p>	<a href="https://github.com/ded/bonzo">Classie - class helper functions </a>by bonzo</p>
+<p>
+	<a href="http://tympanus.net/codrops/2012/04/09/direction-aware-hover-effect-with-css3-and-jquery/">Direction Aware Hover</a> by Codrops</p>
+<p>
+	<a href="http://tympanus.net/codrops/2013/03/19/thumbnail-grid-with-expanding-preview/">Thumbnail Grid with Expanding Preview</a> by Codrops</p>
+<p>
+	<a href="http://tympanus.net/codrops/2011/09/12/elastislide-responsive-carousel/">Elastislide</a> by Codrops</p>
+<p>
+	&nbsp;</p>
+</section>
+
+
+
+    <hr />
+
+<footer>
+    <p>Copyright Vu Khanh Truong 2013 made with the <a href="http://rxa.li/documenter">Documenter v2.0</a></p>
+</footer>
+
+</div><!-- /container -->
+
+<!-- Le javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script>document.createElement('section');var duration='500',easing='swing';</script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/jquery.scrollTo.js"></script>
+<script src="assets/js/jquery.easing.js"></script>
+<script src="assets/js/scripts.js"></script>
+<script src="assets/js/google-code-prettify/prettify.js"></script>
+<script src="assets/js/bootstrap-min.js"></script>
+</body>
+</html>

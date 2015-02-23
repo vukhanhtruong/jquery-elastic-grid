@@ -1,0 +1,548 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"elas",
+				"elastic_grid"
+			],
+			[
+				"hove",
+				"hoverDirection"
+			],
+			[
+				"hov",
+				"hoverInverse"
+			],
+			[
+				"ho",
+				"hoverDelay"
+			],
+			[
+				"con",
+				"config"
+			],
+			[
+				"sc",
+				"scaleup"
+			],
+			[
+				"filt",
+				"filter_effect"
+			],
+			[
+				"fall",
+				"fallPerspective"
+			],
+			[
+				"fil",
+				"filter_effect"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"lar",
+				"large"
+			],
+			[
+				"thu",
+				"thumbnail"
+			],
+			[
+				"str",
+				"strTag"
+			],
+			[
+				"por",
+				"portfolio_filter"
+			],
+			[
+				"g",
+				"grid"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"ul",
+				"ulObject"
+			],
+			[
+				"li",
+				"liObject"
+			],
+			[
+				"a",
+				"aObject"
+			],
+			[
+				"app",
+				"appendTo"
+			],
+			[
+				"im",
+				"imgObject"
+			],
+			[
+				"spa",
+				"spanObject"
+			],
+			[
+				"fi",
+				"figureObject"
+			],
+			[
+				"sp",
+				"spanObject"
+			],
+			[
+				"i",
+				"itemIdx"
+			],
+			[
+				"ite",
+				"items"
+			],
+			[
+				"num",
+				"numOfItems"
+			],
+			[
+				"thum",
+				"thumbnails"
+			],
+			[
+				"be",
+				"bean"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/elastic_grid.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows",
+				"name": "$(function() {"
+			}
+		},
+		{
+			"file": "css/component.css",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/effects.css",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/directhover.css",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/demo.css",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Documents and Settings/tammuz/Application Data/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/xampp/htdocs/gallery/js/json2.js",
+		"/C/xampp/htdocs/gallery/js/jquery.elastislide.js",
+		"/C/xampp/htdocs/gallery/js/grid.js",
+		"/C/xampp/htdocs/gallery/js/jquery.base64.js",
+		"/C/xampp/htdocs/gallery/css/component.css",
+		"/C/xampp/htdocs/gallery/js/filter.js",
+		"/C/xampp/htdocs/gallery/css/nav_responsive.css",
+		"/C/xampp/htdocs/gallery/resource/demo/index.html",
+		"/home/tammuz/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/tammuz/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/var/www/gallery/gallery.sublime-project",
+		"/var/www/gallery/files.txt",
+		"/home/tammuz/.config/sublime-text-3/Packages/CombineAndMinfiy/readme.txt"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\xampp\\htdocs\\gallery\\js",
+			"C:\\xampp\\htdocs\\gallery"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"13.",
+			"Portrait",
+			"/8",
+			"/4",
+			"/2",
+			"2",
+			"1",
+			"ggrid",
+			"jgrid",
+			"75",
+			"filter_effect",
+			"portfolio_filter",
+			"8",
+			"7",
+			"-6",
+			"fly",
+			"fa",
+			"effect-5",
+			"effect-4",
+			"effect-1",
+			"eldata",
+			"expandContainer",
+			"items",
+			"imagesLoaded",
+			"imgLoaded",
+			"initItemsEvents",
+			"$grid",
+			"data('thu",
+			"da",
+			"data('",
+			"span",
+			"img",
+			"thumbs",
+			"thumbnails",
+			"title",
+			"<li></li>",
+			"questionIdx",
+			"small",
+			"nav",
+			"#pull-menu",
+			"porfolio-filter",
+			"\"></script>",
+			"<script src=\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"filterEffect",
+			"porfolio_filter",
+			"#pull",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/elastic_grid.js",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "$(function() {",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "css/component.css",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "css/effects.css",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "css/directhover.css",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "css/demo.css",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 162.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 187.0,
+	"status_bar_visible": true
+}
