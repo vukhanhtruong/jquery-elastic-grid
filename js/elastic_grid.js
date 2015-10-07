@@ -342,10 +342,11 @@ $(function() {
     porfolio_filter.find('li:first').addClass('current');
 
     function createList(text){
-        var filter = text.toLowerCase().replace(' ','-');
+    
         // This is a helper function that takes the
         // text of a menu button and array of li items
-        if(text != ''){
+        if(text != '' && text !==undefined){
+              var filter = text.toLowerCase().replace(' ', '-');
             var li = $('<li>');
             var a = $('<a>',{
                 html: text,
