@@ -221,6 +221,8 @@ $(function() {
                 imgObject = $('<img/>');
                 imgObject.attr('src', item.thumbnail[0]);
                 imgObject.attr('data-largesrc', item.large[0]);
+                imgObject.attr('alt', item.title);
+                imgObject.attr('title', item.title);
 
 
                 //initial hover direction
@@ -626,6 +628,8 @@ $(function() {
                             }
                             ObjImg.attr("src", gthumbs[i]);
                             ObjImg.attr("data-large", glarge[i]);
+                            ObjImg.attr('alt', item.title);
+                            ObjImg.attr('title', item.title);
                             ObjA.append(ObjImg);
                             Objli.append(ObjA);
                             ObjUl.append(Objli);
@@ -641,9 +645,9 @@ $(function() {
 
                             $('<img/>').load(function(){
                                 self.$fullimage.find('img').fadeOut(500, function(){
-                                    $(this).fadeIn(500).attr('src', $largePhoto);
+                                    $(this).fadeIn(500).attr('src', $largePhoto).attr('alt', item.title).attr('title', item.title);
                                 })
-                            }).attr('src', $largePhoto);
+                            }).attr('src', $largePhoto).attr('alt', item.title).attr('title', item.title);
                         });
                         self.$details.append('<div class="infosep"></div>');
                         self.$details.append(carousel);
