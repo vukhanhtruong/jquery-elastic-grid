@@ -1,1 +1,0 @@
-header("Location: http://chauminhduc.com/demo/elastic_grid/");
