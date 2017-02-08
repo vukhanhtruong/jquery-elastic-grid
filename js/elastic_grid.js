@@ -221,8 +221,9 @@ $(function() {
                 imgObject = $('<img/>');
                 imgObject.attr('src', item.thumbnail[0]);
                 imgObject.attr('data-largesrc', item.large[0]);
-                imgObject.attr('alt', item.title);
-                imgObject.attr('title', item.title);
+                imgObject.attr('alt', item.img_title[0]);
+                imgObject.attr('title', item.img_title[0]);
+                // imgObject.attr('title', item.title);
 
 
                 //initial hover direction
@@ -614,6 +615,7 @@ $(function() {
                     //relate photo
                     glarge = eldata.large;
                     gthumbs = eldata.thumbnail;
+                    imgTitle = eldata.img_title;
                     if(glarge.length == gthumbs.length && glarge.length > 0){
                         var ObjUl = $('<ul></ul>');
                         for (i = 0; i < gthumbs.length; i++)
@@ -628,8 +630,8 @@ $(function() {
                             }
                             ObjImg.attr("src", gthumbs[i]);
                             ObjImg.attr("data-large", glarge[i]);
-                            ObjImg.attr('alt', item.title);
-                            ObjImg.attr('title', item.title);
+                            ObjImg.attr('alt', imgTitle[i]);
+                            ObjImg.attr('title', imgTitle[i]);
                             ObjA.append(ObjImg);
                             Objli.append(ObjA);
                             ObjUl.append(Objli);
@@ -642,12 +644,13 @@ $(function() {
                             carousel.find('.selected').removeClass('selected');
                             $(this).addClass('selected');
                             $largePhoto = $(this).data('large');
+                            $titlePhoto = $(this).attr('title');
 
                             $('<img/>').load(function(){
                                 self.$fullimage.find('img').fadeOut(500, function(){
-                                    $(this).fadeIn(500).attr('src', $largePhoto).attr('alt', item.title).attr('title', item.title);
+                                    $(this).fadeIn(500).attr('src', $largePhoto).attr('alt', $titlePhoto).attr('title', $titlePhoto);;
                                 })
-                            }).attr('src', $largePhoto).attr('alt', item.title).attr('title', item.title);
+                            }).attr('src', $largePhoto).attr('alt', $titlePhoto).attr('title', $titlePhoto);
                         });
                         self.$details.append('<div class="infosep"></div>');
                         self.$details.append(carousel);
