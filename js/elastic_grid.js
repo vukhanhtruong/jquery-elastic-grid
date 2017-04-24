@@ -167,6 +167,40 @@ $.fn.imagesLoaded = function( callback ) {
  * Copyright 2013, vukhanhtruong
  * http://www.bonchen.net
  */
+function parseVideoURL(url) {
+
+    function getParm(url, base) {
+        var re = new RegExp("(\\?|&)" + base + "\\=([^&]*)(&|$)");
+        var matches = url.match(re);
+        if (matches) {
+            return(matches[2]);
+        } else {
+            return("");
+        }
+    }
+
+    var retVal = {};
+    var matches;
+    var shortYoutubeRegExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+
+    if (url.indexOf("youtube.com/watch") != -1) {
+        retVal.provider = "youtube";
+        retVal.id = getParm(url, "v");
+        retVal.embed = '//www.youtube.com/embed/'+retVal.id+'?fs=0';
+    } else if (matches = url.match(shortYoutubeRegExp)) {
+        // console.log(matches[2]);
+        retVal.provider = "youtube";
+        retVal.id = matches[2];
+        retVal.embed = '//www.youtube.com/embed/'+retVal.id+'?fs=0';
+    } else if (matches = url.match(/vimeo.com\/(\d+)/)) {
+        retVal.provider = "vimeo";
+        retVal.id = matches[1];
+        retVal.embed = '//player.vimeo.com/video/'+retVal.id+'?fullscreen=0';
+    }
+
+    return(retVal);
+}
+
 $(function() {
     $.elastic_grid = {
         version: '1.0'
@@ -219,8 +253,18 @@ $(function() {
 
                 //initial default photo
                 imgObject = $('<img/>');
-                imgObject.attr('src', item.thumbnail[0]);
-                imgObject.attr('data-largesrc', item.large[0]);
+                var thumbURL = item.thumbnail[0];
+                var largeURL = item.large[0];
+
+                var video = parseVideoURL(largeURL);
+                if(video.provider == 'youtube' || video.provider == 'vimeo'){
+                    largeURL = false;
+
+                    imgObject.attr('data-video', video.embed);
+                }
+
+                imgObject.attr('src', thumbURL);
+                imgObject.attr('data-largesrc', largeURL);
                 imgObject.attr('alt', item.img_title[0]);
                 imgObject.attr('title', item.img_title[0]);
                 // imgObject.attr('title', item.title);
@@ -620,6 +664,9 @@ $(function() {
                         var ObjUl = $('<ul></ul>');
                         for (i = 0; i < gthumbs.length; i++)
                         {
+                            var thumbURL = gthumbs[i];
+                            var largeURL = glarge[i];
+
                             var Objli = $('<li></li>');
                             var ObjA = $('<a href="javascript:;;"></a>');
                             var ObjImg = $('<img/>');
@@ -628,8 +675,16 @@ $(function() {
                             if(i==0){
                                 ObjImg.addClass('selected');
                             }
-                            ObjImg.attr("src", gthumbs[i]);
-                            ObjImg.attr("data-large", glarge[i]);
+
+                            var video = parseVideoURL(largeURL);
+                            if(video.provider == 'youtube' || video.provider == 'vimeo'){
+                                largeURL = false;
+
+                                ObjImg.attr('data-video', video.embed);
+                            }
+
+                            ObjImg.attr("src", thumbURL);
+                            ObjImg.attr("data-large", largeURL);
                             ObjImg.attr('alt', imgTitle[i]);
                             ObjImg.attr('title', imgTitle[i]);
                             ObjA.append(ObjImg);
@@ -643,14 +698,22 @@ $(function() {
                         carousel.append(ObjUl).find('.related_photo').bind('click', function(){
                             carousel.find('.selected').removeClass('selected');
                             $(this).addClass('selected');
+
+                            $youtube = $(this).data('video');
                             $largePhoto = $(this).data('large');
                             $titlePhoto = $(this).attr('title');
 
-                            $('<img/>').load(function(){
+                            if($largePhoto && (typeof $youtube != undefined)){
+                                $('<img/>').load(function(){
+                                    self.$fullimage.find('iframe').fadeOut(500, function(){
+                                        self.$fullimage.find('img').fadeIn(500).attr('alt', $titlePhoto).attr('title', $titlePhoto).attr('src', $largePhoto);
+                                    })
+                                }).attr('alt', $titlePhoto).attr('title', $titlePhoto).attr('src', $largePhoto);
+                            }else{
                                 self.$fullimage.find('img').fadeOut(500, function(){
-                                    $(this).fadeIn(500).attr('src', $largePhoto).attr('alt', $titlePhoto).attr('title', $titlePhoto);;
-                                })
-                            }).attr('src', $largePhoto).attr('alt', $titlePhoto).attr('title', $titlePhoto);
+                                    self.$fullimage.find('iframe').fadeIn(500).attr('src', $youtube);
+                                });
+                            }
                         });
                         self.$details.append('<div class="infosep"></div>');
                         self.$details.append(carousel);
@@ -663,15 +726,40 @@ $(function() {
                     // for smaller screens we don´t display the large image (the media query will hide the fullimage wrapper)
                     if( self.$fullimage.is( ':visible' ) ) {
                         this.$loading.show();
-                        $( '<img/>' ).load( function() {
-                            var $img = $( this );
-                            if( $img.attr( 'src' ) === self.$item.children('a').find('img').data( 'largesrc' ) ) {
-                                self.$loading.hide();
-                                self.$fullimage.find( 'img' ).remove();
-                                self.$largeImg = $img.fadeIn( 350 );
-                                self.$fullimage.append( self.$largeImg );
-                            }
-                        } ).attr( 'src', eldata.large[0] );
+
+                        var iframe = $('<iframe width="100%" height="100%" frameborder="0"></iframe>');
+                        var img = $( '<img/>' );
+                        self.$fullimage.append(iframe);
+                        self.$fullimage.append(img);
+
+                        var firstChild  = self.$item.children('a').find('img');
+                        var $youtube    = firstChild.data( 'video' );
+                        var $largePhoto = firstChild.data( 'largesrc' );
+                        if($largePhoto && (typeof $youtube != undefined)){
+                            img.load( function() {
+                                var $img = $( this );
+                                if( $img.attr( 'src' ) === $largePhoto ) {
+                                    self.$loading.hide();
+                                    // self.$fullimage.find('iframe, img').fadeOut(500, function(){
+                                    //     self.$fullimage.find('img').attr('src', $largePhoto);
+                                    // });
+                                    self.$fullimage.find( 'img' ).remove();
+                                    self.$largeImg = $img.fadeIn( 350 );
+                                    self.$fullimage.find('iframe').fadeOut(500, function(){
+                                        self.$fullimage.append( self.$largeImg );
+                                    });
+                                }
+                            } ).attr( 'src', eldata.large[0] );
+
+                        }else{
+                            self.$loading.hide();
+
+                            self.$fullimage.find('img').fadeOut(500, function(){
+                                // iframe.ready(function (){
+                                self.$fullimage.find('iframe').fadeIn(500).attr('src', $youtube);
+                                // });
+                            });
+                        }
                     }
 
                 }
