@@ -515,6 +515,7 @@ $(function() {
                 //remove animate class
                 $item.removeClass('animate');
 
+                getWinSize();
                 // check if item already opened
                 current === $item.index() ? hidePreview($(this)) : showPreview( $item );
                 return false;
@@ -533,7 +534,7 @@ $(function() {
 
             var preview = $.data( this, 'preview' ),
                 // item´s offset top
-                position = $item.data( 'offsetTop' );
+                position = $item[0].offsetTop; // $item.data( 'offsetTop' );
 
             scrollExtra = 0;
 
@@ -850,15 +851,16 @@ $(function() {
 
             },
             positionPreview : function() {
-
+                // Last change here for offsetTop
                 // scroll page
                 // case 1 : preview height + item height fits in window´s height
                 // case 2 : preview height + item height does not fit in window´s height and preview height is smaller than window´s height
                 // case 3 : preview height + item height does not fit in window´s height and preview height is bigger than window´s height
-                var position = this.$item.data( 'offsetTop' ),
+                var position = this.$item[0].offsetTop,
                     previewOffsetT = this.$previewEl.offset().top - scrollExtra,
                     scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
 
+                    // console.log(position, previewOffsetT, scrollVal)
                 $body.animate( { scrollTop : scrollVal }, settings.speed );
 
             },
