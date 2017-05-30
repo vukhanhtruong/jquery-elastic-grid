@@ -316,7 +316,7 @@ $(function() {
         // Adding a data-id attribute. Required by the Quicksand plugin:
         elem.attr('data-id',i);
 
-        elem.addClass('all');
+        elem.addClass(config.showAllText.toLowerCase().replace(' ','-'));
         $.each(tags,function(key,value){
             // Removing extra whitespace:
             value = $.trim(value);
@@ -466,7 +466,16 @@ $(function() {
                 var $item = $( this );
                 $item.data( 'offsetTop', $item.offset().top );
                 if( saveheight ) {
-                    $item.data( 'height', $item.height() );
+                    $item.find('img').load(function() {
+                        console.log($item.outerHeight());
+                        $item.data( 'height', $item.height());
+                    }).each(function() {
+                      if(this.complete) $(this).load();
+                    });
+
+                    setTimeout(function(){
+                        $item.data( 'height', $item.height());
+                    });
                 }
             } );
         }
@@ -867,14 +876,14 @@ $(function() {
         //     addItems : addItems
         // };
         $grid.imagesLoaded( function() {
-
-            // save item´s size and offset
-            saveItemInfo( true );
-            // get window´s size
-            getWinSize();
             // initialize some events
             initEvents();
 
+            // get window´s size
+            getWinSize();
+
+            // save item´s size and offset
+            saveItemInfo( true );
         } );
 
     }
