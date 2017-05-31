@@ -371,6 +371,8 @@ $(function() {
             }
         });
 
+        localStorage.setItem('filter', true);
+
         $body.animate( { scrollTop : $this.offset().top }, settings.speed );
 
         return false;
@@ -516,6 +518,8 @@ $(function() {
                 //$(this).addClass('unhoverdir');
                 //remove animate class
                 $item.removeClass('animate');
+
+                localStorage.setItem('filter', false);
 
                 getWinSize();
                 // check if item already opened
@@ -865,9 +869,10 @@ $(function() {
                     previewOffsetT = this.$previewEl.offset().top - scrollExtra,
                     scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
 
-                // $body.animate( { scrollTop : scrollVal }, settings.speed );
-                $body.animate( { scrollTop : this.$item.offset().top }, settings.speed );
-
+                var isFilter = localStorage.getItem("filter");
+                if(isFilter === "false") {
+                    $body.animate( { scrollTop : this.$item.offset().top }, settings.speed );
+                }
             },
             setTransition  : function() {
                 this.$previewEl.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
