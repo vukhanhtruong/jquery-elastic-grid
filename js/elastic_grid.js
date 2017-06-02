@@ -372,11 +372,10 @@ $(function() {
         });
 
         localStorage.setItem("filter", true);
+        localStorage.setItem("filter-all", false);
 
-        if (filterVal, config.showAllText.toLowerCase().replace(' ','-')) {
+        if (filterVal === config.showAllText.toLowerCase().replace(' ','-')) {
             localStorage.setItem("filter-all", true);
-        } else {
-            localStorage.setItem("filter-all", false);
         }
 
         $body.animate( { scrollTop : $this.offset().top }, settings.speed );
