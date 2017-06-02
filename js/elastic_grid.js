@@ -371,7 +371,13 @@ $(function() {
             }
         });
 
-        localStorage.setItem('filter', true);
+        localStorage.setItem("filter", true);
+
+        if (filterVal, config.showAllText.toLowerCase().replace(' ','-')) {
+            localStorage.setItem("filter-all", true);
+        } else {
+            localStorage.setItem("filter-all", false);
+        }
 
         $body.animate( { scrollTop : $this.offset().top }, settings.speed );
 
@@ -870,8 +876,14 @@ $(function() {
                     scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
 
                 var isFilter = localStorage.getItem("filter");
-                if(isFilter === "false") {
+                var isFilterAll = localStorage.getItem("filter-all");
+
+                if(isFilter === "false" && !isFilterAll === "false") {
                     $body.animate( { scrollTop : this.$item.offset().top }, settings.speed );
+                }
+
+                if(isFilterAll === "true") {
+                    $body.animate( { scrollTop : this.$item.data( 'offsetTop' ) }, settings.speed );
                 }
             },
             setTransition  : function() {
@@ -896,6 +908,9 @@ $(function() {
 
             // save item´s size and offset
             saveItemInfo( true );
+
+            //init filter
+            localStorage.setItem("filter-all", true);
         } );
 
     }
