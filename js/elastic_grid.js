@@ -316,13 +316,13 @@ $(function() {
         // Adding a data-id attribute. Required by the Quicksand plugin:
         elem.attr('data-id',i);
 
-        elem.addClass(config.showAllText.toLowerCase().replace(' ','-'));
+        elem.addClass(config.showAllText.split(' ').join('-'));
         $.each(tags,function(key,value){
             // Removing extra whitespace:
             value = $.trim(value);
 
             //add class tags to li
-            elem.addClass(value.toLowerCase().replace(' ','-'));
+            elem.addClass(value.split(' ').join('-'));
 
             if(!(value in itemsByTags)){
                 // Create an empty array to hold this item:
@@ -359,7 +359,7 @@ $(function() {
         porfolio_filter.find('.current').removeClass('current');
         $this.parent().addClass('current');
 
-        var filterVal = $this.text().toLowerCase().replace(' ','-');
+        var filterVal = $this.text().split(' ').join('-');
         var count  = numOfItems;
         ulObject.find('li').each( function(i, el) {
             classie.remove( el, 'hidden' );
@@ -374,7 +374,7 @@ $(function() {
         localStorage.setItem("filter", true);
         localStorage.setItem("filter-all", false);
 
-        if (filterVal === config.showAllText.toLowerCase().replace(' ','-')) {
+        if (filterVal === config.showAllText.split(' ').join('-')) {
             localStorage.setItem("filter-all", true);
         }
 
@@ -398,7 +398,7 @@ $(function() {
     porfolio_filter.find('li:first').addClass('current');
 
     function createList(text){
-        var filter = text.toLowerCase().replace(' ','-');
+        var filter = text.split(' ').join('-');
         // This is a helper function that takes the
         // text of a menu button and array of li items
         if(text != ''){
